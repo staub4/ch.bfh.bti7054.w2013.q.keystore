@@ -1,5 +1,6 @@
+
 Technologies used:
 
-- phpseclib (http://phpseclib.sourceforge.net , MIT Licence) for en-/decryption in php
-- standard php-openssl and php-hash extensions
-- encryption in javascript: JSEncrypt (http://github.com/travist/jsencrypt/ , MIT Licence)
+- encryption with GnuPG and corresponding libraries for javascript and php.
+- SSL/TLS with Perfect Forward Secrecy (DHE_RSA)
+- client authentication with certificates
