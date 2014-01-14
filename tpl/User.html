@@ -1,0 +1,18 @@
+<!-- BEGIN:user -->
+    <h1>Profile for {name}</h1>
+    <div id="message" class="messagebox"></div><br />
+    Userid: {id}<br />
+    Username: {name}<br />
+    Your public key:<br />
+    <textarea cols="0" rows="15" class="code" id="pubkey">{pubkey}</textarea><br />
+    <input type="button" id="send" value="Save" />
+    <script type="text/javascript">
+        $("#send").click( function() {
+            $.ajax(
+                "controller/saveUser.php?pubkey="+$("#pubkey").val()
+            ).done(
+                $("#message").html("Public key saved!")
+            ); 
+        } );
+    </script>
+<!-- END:user -->
